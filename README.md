@@ -15,9 +15,12 @@ We are using the __GTZAN__ dataset which contains a total of 1000 audio files in
 We convert every audio file to signals with a sampling rate to analyze its characteristics. 
 Every waveform has its features in ttwo forms:
 - Time domain- nothing much information about music quality can be extracted and explored apart from visual distinction in the waveforms
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z1.png)
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z2.png)
 - Frequency domain which we get after fourier transform of two types: Spectral featuresa nd Rhythm features
-![]()
+
 #### MFC coeffiecients
 ![]()
 ### Rhythm features
+![]()
 MFCC and Rhythm feature plots provide a matrix based information for the unique features. Both the features have been mapped with the duration of the music file.
