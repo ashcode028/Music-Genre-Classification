@@ -17,10 +17,28 @@ Every waveform has its features in ttwo forms:
 - Time domain- nothing much information about music quality can be extracted and explored apart from visual distinction in the waveforms
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z1.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z2.png)
-- Frequency domain which we get after fourier transform of two types: Spectral featuresa nd Rhythm features
+- Frequency domain which we get after fourier transform of two types: Spectral features and Rhythm features
+#### Spectral
+![MFCC](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/mfcc1.png)
+![Spectogram](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/stft_spectrogram2.png)
+#### Rhythm features
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/rhythm1.png)
 
-#### MFC coeffiecients
-![]()
-### Rhythm features
-![]()
+
 MFCC and Rhythm feature plots provide a matrix based information for the unique features. Both the features have been mapped with the duration of the music file.
+
+### Preprocessing
+
+__Standardization__: The aim of this step is to standardize the range of the continuous initial variables so that each one of them contributes equally to the analysis.
+
+More specifically, the reason why it is critical to perform standardization prior to PCA, is that the latter is quite sensitive regarding the variances of the initial variables. That is, if there are large differences between the ranges of initial variables, those variables with larger ranges will dominate over those with small ranges (For example, a variable that ranges between 0 and 100 will dominate over a variable that ranges between 0 and 1), which will lead to biased results. So, transforming the data to comparable scales can prevent this problem.
+ 
+ ## Methodology
+ Feature extraction -> correlation matrix -> PCA
+ - With 30 secs sample
+ ![](Features_extracted_plots/Corr_Heatmap30_better.png)
+ ![](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/PCA30_std.png)
+ - With 3 secs sample
+![](Features_extracted_plots/Corr_Heatmap3.png)
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/PCA_std.png)
+  
