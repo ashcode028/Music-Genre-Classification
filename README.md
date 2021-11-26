@@ -10,11 +10,14 @@ We aim to address music classification into specific musical genres through our 
 
 ## Dataset Description
 We are using the __GTZAN__ dataset which contains a total of 1000 audio files in .wav format divided into 10 genres. Each genre has 100 songs of 30-sec duration. Along with the audio files, 2 CSV files containing features of the audio files. The files contain mean and variance calculated over multiple features that can be obtained from an audio file. The other file has the same composition, but the songs were divided into 3-second audio files. 
-
+![Genres](https://github.com/ashcode028/Music-Genre-Classification/blob/7aff7f3c06156814dca7298baec67d6cc87df4cc/Features_extracted_plots/Genre.png)
 ### Audio signal feature extraction:
 We convert every audio file to signals with a sampling rate to analyze its characteristics. 
 Every waveform has its features in ttwo forms:
 - Time domain- nothing much information about music quality can be extracted and explored apart from visual distinction in the waveforms
-- Frequency domain which is got after fourier transform.
-
-
+- Frequency domain which we get after fourier transform of two types: Spectral featuresa nd Rhythm features
+![]()
+#### MFC coeffiecients
+![]()
+### Rhythm features
+MFCC and Rhythm feature plots provide a matrix based information for the unique features. Both the features have been mapped with the duration of the music file.
