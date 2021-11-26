@@ -13,6 +13,8 @@ We are using the __GTZAN__ dataset which contains a total of 1000 audio files in
 
 ### Audio signal feature extraction:
 We convert every audio file to signals with a sampling rate to analyze its characteristics. 
-There are 2 metrics to understand the unique features in any music file. 
-- First, plotting the wave plot, in case of human interpretation, and further applying short fourier transformation to normalize the amplitude for the power graph. 
-- Second, extracting the Mel-Frequency Cepstrum Coefficients (or MFCCs), in case of computer interpretation, which is basically monitoring the change of short-term power spectrum of a sound, based on a linear cosine transform of a log power spectrum. This gives a representation of the change in frequency and amplitude in a mathematically computed form for our training.
+Every waveform has its features in ttwo forms:
+- Time domain- nothing much information about music quality can be extracted and explored apart from visual distinction in the waveforms
+- Frequency domain which is got after fourier transform.
+
+
