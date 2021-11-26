@@ -47,6 +47,7 @@ Why is it important to preprocess the data?
 ![](Features_extracted_plots/Corr_Heatmap3.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/PCA_std.png)
 - Less outliers/ variance for some classes found in principal components:
+- 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Features_extracted_plots/pc1.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Features_extracted_plots/pc2.png)
 #### Inferences till this step:
