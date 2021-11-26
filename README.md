@@ -63,7 +63,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ### SGD Classifier
 ### Gaussian NB
 ### KNN
-### DT
+### Decision Trees
 - Took DT as baseline model which didnt give great results, with accuracy around 65%.
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/DT-ROC.png)
 
@@ -104,7 +104,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Precision| 0.8979267969111706|
 |Recall|0.8972734276109252|
 
-### RF
+### Random Forest
 - As shown here RF was having around 80% accuracy but XGB boosting reduced the accuracy to 75%
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/RF-ROC.png)
 
@@ -126,7 +126,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Precision       |     0.7593347049139745     |
 |Recall          |0.7494976488750396           |
 
-### XGB 
+### XGB Classifier
 - Correlation matrix shows there is very less correlation among variables
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB-ROC.png)
