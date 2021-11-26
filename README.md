@@ -66,6 +66,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ### KNN
 ### Decision Trees
 - Took DT as baseline model which didnt give great results, with accuracy around 65%.
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/DT-ROC.png)
 
 |Metric          |  Value                        |
@@ -75,6 +76,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Recall|0.6376582879474517|
 
 - Used ADA boosting which reduced the performance(rock,pop,disco)
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/ADA-ROC.png)
 
 |Metric          |  Value                        |
@@ -85,6 +87,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Recall|0.4992406459587978|
 
 - Then gradient boosting which increased the accuracy exponentially.
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/GRADIENT-ROC.png)
 
 |Metric          |  Value                        |
@@ -95,7 +98,9 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Recall|0.8232200760446549|
 
 - CatBoost was having high AUC for all genres unlike gradient which had low accuracy for some genres
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/CATBOOST-ROC.png)
+
 - Cat boost outperformed ensemble methods. Gradient boost was close enough with 82% accuracy, rest all were in between 50-60%
 
 |Metric          |  Value                        |
@@ -107,6 +112,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 
 ### Random Forest
 - As shown here RF was having around 80% accuracy but XGB boosting reduced the accuracy to 75%
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/RF-ROC.png)
 
 |Metric          |  Value                        |
@@ -116,7 +122,8 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 |Precision       |0.805947955999254              |
 |Recall          |0.8026467091527609             |
 
-- Boosting reduced the accuracy , it even reduced precision ,recall to large extent.
+- Cross Gradient Boosting on Random Forest reduced the accuracy , it even reduced precision ,recall to large extent.
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB-RF-ROC.png)
 
 
@@ -129,8 +136,10 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 
 ### XGB Classifier
 - Correlation matrix shows there is very less correlation among variables
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB-ROC.png)
+
 - Best performed model among all DT and RF models with every genre was classified with atleast 85+% accuracy 
 - Genres like classical,hiphop had even 100% accuracy
 - XGBoost improves upon the basic Gradient Boosting Method framework through systems optimization and algorithmic enhancements.
