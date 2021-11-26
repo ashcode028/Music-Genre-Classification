@@ -64,30 +64,45 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ### SGD Classifier
 Took SGD as baseline model
 This model used a simple SGD classifier and used Hyperparameter testing to get the best performance.
-hyperparameters for a learning algorithm. A hyperparameter is a model argument whose value is set before the learning process begins. The key to machine learning algorithms is hyperparameter tuning
+hyperparameters for a learning algorithm. A hyperparameter is a model argument whose value is set before the learning process begins. 
+The key to machine learning algorithms is hyperparameter tuning
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_SGD.png)
-Accuracy score: 0.6441441441441441
-Overall Precision: 0.6386137102787109
-Overall Recall:0.6421140902032518
+
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score| 0.6441441441441441|
+|Precision|0.6386137102787109|
+|Recall|0.6421140902032518|
+
 
 ### Gaussian NB
 We used a Simple Naive Bayes classifier, one vs Rest Naive Bayes as baseline models
 Used Hyperparameter testing to get better performance.
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_NB.png)
+
 Best parameters : 
-Accuracy score: 0.46896896896896895
-Overall Precision: 0.4606482379884576
-Overall Recall:0.4755693757933862
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.468968968968968951|
+|Precision|0.4606482379884576|
+|Recall|0.4755693757933862|
 
 ### KNN
 This model almost outperformed compared to Gaussian NB models. 
 This model used basic Classifiers with Hyperparameter testing to get the best performance.
 As we can see , after HP tuning , correlation between the features has decreased, some had even 0 correlation.
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_KNN.png)
+
 Using hyperparameter tuning :
-Accuracy score: 0.9059059059059059
-Overall Precision: 0.9073617032054686
-Overall Recall:0.905944266718195
+
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.9059059059059059|
+|Precision|0.9073617032054686|
+|Recall|0.905944266718195|
+
 
 ### Decision Trees
 - Took DT as baseline model which didnt give great results, with accuracy around 65%.
