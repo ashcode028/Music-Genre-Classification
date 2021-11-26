@@ -28,10 +28,15 @@ Every waveform has its features in ttwo forms:
 MFCC and Rhythm feature plots provide a matrix based information for the unique features. Both the features have been mapped with the duration of the music file.
 
 ### Preprocessing
-
-__Standardization__: The aim of this step is to standardize the range of the continuous initial variables so that each one of them contributes equally to the analysis.
-
-More specifically, the reason why it is critical to perform standardization prior to PCA, is that the latter is quite sensitive regarding the variances of the initial variables. That is, if there are large differences between the ranges of initial variables, those variables with larger ranges will dominate over those with small ranges (For example, a variable that ranges between 0 and 100 will dominate over a variable that ranges between 0 and 1), which will lead to biased results. So, transforming the data to comparable scales can prevent this problem.
+After extraction of features, all columns were not null. So extra values were not added.
+Why is it important to preprocess the data?
+- The variables will be transformed to the same scale.
+- So that all continuous variables contribute equally 
+- Such that no biased results 
+- PCA very sensitive to variances of initial variables
+ If large variance range difference between features , the one with larger range will dominate
+- The boxplots of each feature shows some features have very large differences in their variances.
+- PCA with both normalisation(minMaxScaler) and standardisation(StandardScaler) is done and difference noted.
  
  ## Methodology
  Feature extraction -> correlation matrix -> PCA
@@ -41,4 +46,33 @@ More specifically, the reason why it is critical to perform standardization prio
  - With 3 secs sample
 ![](Features_extracted_plots/Corr_Heatmap3.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/ef966977e66f7f62a116ffb6c3b2a2a4f3f3f8cc/Features_extracted_plots/PCA_std.png)
-  
+- Less outliers/ variance for some classes found in principal components:
+### Inferences:
+- pca.explained_variance_ratio_=[0.20054986 0.13542712]
+Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
+- Big clusters of metal , rock, pop ,reggae, classical can be seen.
+- Jazz ,country, are separable to one extent.
+- Hip-hop,disco,blues are very dispersed and can’t be seen 
+- Majority are easily separable classes
+- Decided to proceed to modelling phase by using 3 sec sampled feature set with standardization.
+
+## Classification:
+### Logistic
+### SGD Classifier
+### Gaussian NB
+### KNN
+### DT
+- Took DT as baseline model
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/DT-ROC.png)
+- Used ADA boosting which reduced the performance(rock,pop,disco)
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/ADA-ROC.png)
+- Then gradient boosting which increased the accuracy exponentially.
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/GRADIENT-ROC.png)
+- CatBoost was having high AUC for all genres unlike gradient which had low accuracy for some genres
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/CATBOOST-ROC.png)
+
+### RF
+### XGB 
+### MLP
+### SVM
+
