@@ -62,7 +62,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ### Gaussian NB
 ### KNN
 ### DT
-- Took DT as baseline model
+- Took DT as baseline model which didnt give great results, with accuracy around 65%.
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/DT-ROC.png)
 - Used ADA boosting which reduced the performance(rock,pop,disco)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/ADA-ROC.png)
@@ -70,9 +70,18 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/GRADIENT-ROC.png)
 - CatBoost was having high AUC for all genres unlike gradient which had low accuracy for some genres
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/CATBOOST-ROC.png)
-
 ### RF
+- As shown here RF was having around 80% accuracy but XGB boosting reduced the accuracy to 75%
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/RF-ROC.png)
+- Boosting reduced the accuracy , it even reduced precision ,recall to large extent.
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB-RF-ROC.png)
 ### XGB 
+- Correlation matrix shows there is very less correlation among variables
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB.png)
+- Best performed model among all DT and RF models
+- Every genre was classified with atleast 85+% accuracy 
+- Genres like classical,hiphop had even 100% accuracy
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/Plots_DT_ENSEMBLE/XGB-ROC.png)
 ### MLP
 ### SVM
 
