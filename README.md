@@ -62,10 +62,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ## Classification:
 ### Logistic
 ### SGD Classifier
-Took SGD as baseline model
-This model used a simple SGD classifier and used Hyperparameter testing to get the best performance.
-hyperparameters for a learning algorithm. A hyperparameter is a model argument whose value is set before the learning process begins. 
-The key to machine learning algorithms is hyperparameter tuning
+Took SGD as baseline model and performed hyperparameter tuning for a better performance.Though difference werent that great even after HP tuning.
 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_SGD.png)
 
@@ -77,8 +74,8 @@ The key to machine learning algorithms is hyperparameter tuning
 
 
 ### Gaussian NB
-We used a Simple Naive Bayes classifier, one vs Rest Naive Bayes as baseline models
-Used Hyperparameter testing to get better performance.
+We used a Simple Naive Bayes classifier, one vs Rest Naive Bayes as baseline models.
+Then used Hyperparameter testing to get better performance.
 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_NB.png)
 
@@ -91,8 +88,9 @@ Best parameters :
 
 ### KNN
 This model almost outperformed compared to Gaussian NB models. 
-This model used basic Classifiers with Hyperparameter testing to get the best performance.
+
 As we can see , after HP tuning , correlation between the features has decreased, some had even 0 correlation.
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_KNN.png)
 
 Using hyperparameter tuning :
