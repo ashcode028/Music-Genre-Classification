@@ -67,6 +67,7 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 ### SGD Classifier
 Took SGD as baseline model and performed hyperparameter tuning for a better performance.Though difference werent that great even after HP tuning.
 
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_SGD.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_SGD.png)
 
 |Metric          |  Value                        |
@@ -91,9 +92,9 @@ Best parameters :
 
 ### KNN
 This model almost outperformed compared to Gaussian NB models. 
-
 As we can see , after HP tuning , correlation between the features has decreased, some had even 0 correlation.
 
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/KNN.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_KNN.png)
 
 Using hyperparameter tuning :
