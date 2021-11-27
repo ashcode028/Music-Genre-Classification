@@ -95,8 +95,10 @@ This model almost outperformed compared to Gaussian NB models.
 As we can see , after HP tuning , correlation between the features has decreased, some had even 0 correlation.
 
 Without Hyperparameter tuning:
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/KNN.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_simpleKNN.png)
+
 |Metric          |  Value                        |
 |:---            |                           ---:|  
 |Accuracy score|0.8603603603603603|
