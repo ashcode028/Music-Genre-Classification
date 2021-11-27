@@ -94,16 +94,27 @@ Best parameters :
 This model almost outperformed compared to Gaussian NB models. 
 As we can see , after HP tuning , correlation between the features has decreased, some had even 0 correlation.
 
+Without Hyperparameter tuning:
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/KNN.png)
-![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_KNN.png)
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_simpleKNN.png)
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.8603603603603603|
+|Precision|0.8594536380364758|
+|Recall|0.8583135066852872|
 
 Using hyperparameter tuning :
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_KNN.png)
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_KNN.png)
 
 |Metric          |  Value                        |
 |:---            |                           ---:|  
 |Accuracy score|0.9059059059059059|
 |Precision|0.9073617032054686|
 |Recall|0.905944266718195|
+
+
 
 
 ### Decision Trees
