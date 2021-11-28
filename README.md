@@ -255,6 +255,7 @@ Using hyperparameter tuning :
 - regularization and decomposition etc
 ### SVM
 This model outperformed every other model and gave the best accuracy. Manual hyperparameter tuning was done. Linear, polynomial and RBF  kernel were compared using confusion matrix.
+
 Best Linear Kernel Model: 
 
 ![Best SVM linear kernel](https://user-images.githubusercontent.com/61936574/143769002-09ed2434-fa45-4b84-860e-0648523a3e59.png)
@@ -263,8 +264,13 @@ Best Linear Kernel Model:
 Best Polynomial Kernel Model: 
 
 ![Best SVM poly kernel of degree 7](https://user-images.githubusercontent.com/61936574/143769340-5b7fb30a-9f11-4f8a-9dbd-67f93442a1b7.png)
+![Plot of Classification Report - SVM Poly Best](https://user-images.githubusercontent.com/61936574/143769525-c0ea5e9e-4041-4594-ac49-254a59f075c4.png)
 
 Best RBF Kernel Model: 
+
+![Best SVM rbf kernel c=200 gamma=4](https://user-images.githubusercontent.com/61936574/143769535-e595601a-8465-4913-92cb-883c62172829.png)
+![Plot of Best Classification Report - SVM Best RBF](https://user-images.githubusercontent.com/61936574/143769548-aea05e19-5ac8-4d4e-bf4e-2574fe99d572.png)
+
 
 
 
