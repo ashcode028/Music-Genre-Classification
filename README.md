@@ -250,10 +250,12 @@ From the following graph, we choose softplus to be the best activation function,
 Upon looking the graph, we can conclude a very high variance in testing and training accuracy and so we know that our model is overfitting. In fact the testing loss starts to increase which indicates a high cross entropy loss. This will be dealt later. For now we see that softplus, relu and sigmoid, all 3 have performed similar on training and testing set thus we will go with softplus since it provides a little less variance than others.
 
 #### Hyperparameter tuning has been done manually by manipulating the following metrics: 
-#### - Learning rate
+- Learning rate <br>
 activation = softmax <br>
 no. of hidden layers = 3; neurons in each = [512,256,64] <br>
 activation of output layer is fixed to be softmax epochs = 100 <br>
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/learningRate.jpg)
 
 |Learning Rate |  Training Accuracy  |  Testing Accuracy  | 
 |:---          |                 ---:|                ---:|
@@ -268,10 +270,12 @@ The best choice for alpha is either 0.0001 or 0.00001. <br>
 0.00001 has a relatively low variance and loss converges quickly with epochs but accuracy on training and testing set is pretty low. <br>
 0.0001 has a better performance but variance is very high
 
-- no.of hidden layers 
+- no.of hidden layers <br>
 activation = softmax <br>
 learning rate = 0.0001 <br>
 activation of output layer is fixed to be softmax epochs = 100 <br>
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/layers.jpg)
 
 |Number of layers|  Training Accuracy  |  Testing Accuracy  | 
 |:---            |                 ---:|                ---:|
@@ -281,13 +285,15 @@ activation of output layer is fixed to be softmax epochs = 100 <br>
 
 In conclusion, increasing or decreasing the number of layers have no effect on variance. This is because we have too many neurons per layer. So we take 3 layers and reduce the number of neurons. 
 
-- Number of neurons
+- Number of neurons <br>
 activation = softmax <br>
 learning rate = 0.0001 <br>
 number of layers = 3 <br>
 activation of output layer is fixed to be softmax epochs = 100 <br>
 drop out probability = 0.3 <br>
 alpha = 0.001<br>
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/neurons.jpg)
 
 |Number of neurons|  Training Accuracy  |  Testing Accuracy  | 
 |:---             |                 ---:|                ---:|
@@ -298,7 +304,9 @@ alpha = 0.001<br>
 
 Now for the same neuron set, we apply regularization and neuron dropout to find any change in the variance for high number of neurons with reducing the number of neurons <br>
 
-- regularization and decomposition
+- regularization and decomposition <br>
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/regularization.jpg)
 
 |Number of neurons|  Training Accuracy  |  Testing Accuracy  | 
 |:---             |                 ---:|                ---:|
@@ -312,17 +320,24 @@ So in conclusion, if we have high number of neurons per layer, then applying reg
 ##### For our purposes, we select high number of neurons per layer with regularization
 #### Final model
 From all our analysis and extra experimentation we conclude our model with following metrics: <br>
-- activation : softmax
+- activation : softmax 
 - learning rate : 0.0001
 - number of hidden layers = 3
 - number of neurons in each layer = [512,256,128]
 - epochs = 100
 - regularization and dropout true
 
-Precision on the model :	 0.5774000692307671
-Recall on the model : 		 0.583
-F1score on the model : 		 0.5801865223684216
-Accuracy on the model : 	 0.6130000042915345
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/heatmap.png)
+
+Precision on the model :	 0.5774000692307671 <br>
+Recall on the model : 		 0.583 <br>
+F1score on the model : 		 0.5801865223684216 <br>
+Accuracy on the model : 	 0.6130000042915345 <br>
+
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/roc.png)
+
+Even after hyperparameter tuning, the best accuracy is just above 60%. The reason is simply because of overfitting and underperformance due to inability to pick up each feature. This creates amazing accuracy on the training set but always misses out on the testing set.
 
 
 ### SVM
