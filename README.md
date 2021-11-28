@@ -209,6 +209,24 @@ Using hyperparameter tuning :
 |Recall          |0.9072401472896423            |
 
 ### MLP
+- This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : 
+
+
+|Activation |  Training Accuracy  |  Testing Accuracy  | 
+|:---       |                 ---:|                ---:|
+|relu       |0.9887142777442932   |0.5206666588783264  | 
+|sigmoid    |0.941428542137146    |0.4970000088214874  |
+|tanh       |0.9997143149375916   |0.49266666173934937 |
+|softplus   |0.9991428852081299   | 0.5583333373069763 |
+
+- from the following graph, we choose softplus to be the best activation function, considering softmax to be fixed for output
+  
+#### Hyperparameter tuning has been done manually by manipulating the following metrics: 
+- no. of neurons
+
+- no.of hidden layers
+- learning rate
+- regularization and decomposition etc
 ### SVM
 
 ## Conclusions:
