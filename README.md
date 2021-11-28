@@ -235,7 +235,7 @@ Using hyperparameter tuning :
 |Recall          |0.9072401472896423            |
 
 ### MLP
-This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : 
+This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : <br>
 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/activation.jpg)
 
@@ -245,7 +245,8 @@ This model is an Artificial Neural Network involving multiple layers and each la
 |sigmoid    |0.941428542137146    |0.4970000088214874  |
 |tanh       |0.9997143149375916   |0.49266666173934937 |
 |softplus   |0.9991428852081299   | 0.5583333373069763 |
-from the following graph, we choose softplus to be the best activation function, considering softmax to be fixed for output
+
+From the following graph, we choose softplus to be the best activation function, considering softmax to be fixed for output <br>
 Upon looking the graph, we can conclude a very high variance in testing and training accuracy and so we know that our model is overfitting. In fact the testing loss starts to increase which indicates a high cross entropy loss. This will be dealt later. For now we see that softplus, relu and sigmoid, all 3 have performed similar on training and testing set thus we will go with softplus since it provides a little less variance than others.
 
 #### Hyperparameter tuning has been done manually by manipulating the following metrics: 
