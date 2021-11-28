@@ -250,7 +250,7 @@ From the following graph, we choose softplus to be the best activation function,
 Upon looking the graph, we can conclude a very high variance in testing and training accuracy and so we know that our model is overfitting. In fact the testing loss starts to increase which indicates a high cross entropy loss. This will be dealt later. For now we see that softplus, relu and sigmoid, all 3 have performed similar on training and testing set thus we will go with softplus since it provides a little less variance than others.
 
 #### Hyperparameter tuning has been done manually by manipulating the following metrics: 
-##### - Learning rate
+#### - Learning rate
 activation = softmax <br>
 no. of hidden layers = 3; neurons in each = [512,256,64] <br>
 activation of output layer is fixed to be softmax epochs = 100 <br>
@@ -268,7 +268,7 @@ The best choice for alpha is either 0.0001 or 0.00001. <br>
 0.00001 has a relatively low variance and loss converges quickly with epochs but accuracy on training and testing set is pretty low. <br>
 0.0001 has a better performance but variance is very high
 
-##### - no.of hidden layers 
+- no.of hidden layers 
 activation = softmax <br>
 learning rate = 0.0001 <br>
 activation of output layer is fixed to be softmax epochs = 100 <br>
@@ -281,13 +281,13 @@ activation of output layer is fixed to be softmax epochs = 100 <br>
 
 In conclusion, increasing or decreasing the number of layers have no effect on variance. This is because we have too many neurons per layer. So we take 3 layers and reduce the number of neurons. 
 
-##### - Number of neurons
-activation = softmax
-learning rate = 0.0001
-number of layers = 3
-activation of output layer is fixed to be softmax epochs = 100
-drop out probability = 0.3
-alpha = 0.001
+- Number of neurons
+activation = softmax <br>
+learning rate = 0.0001 <br>
+number of layers = 3 <br>
+activation of output layer is fixed to be softmax epochs = 100 <br>
+drop out probability = 0.3 <br>
+alpha = 0.001<br>
 
 |Number of neurons|  Training Accuracy  |  Testing Accuracy  | 
 |:---             |                 ---:|                ---:|
@@ -296,9 +296,35 @@ alpha = 0.001
 |[180, 90, 30]    |0.7991428375244141   |0.503000020980835   |
 |[128, 64, 32]    |0.6991428732872009   |0.4900000095367431  |
 
-Now for the same neuron set, we apply regularization and neuron dropout to find any change in the variance for high number of neurons with reducing the number of neurons
+Now for the same neuron set, we apply regularization and neuron dropout to find any change in the variance for high number of neurons with reducing the number of neurons <br>
 
-##### - regularization and decomposition etc
+- regularization and decomposition
+
+|Number of neurons|  Training Accuracy  |  Testing Accuracy  | 
+|:---             |                 ---:|                ---:|
+|[512, 256, 128]  |0.6759999990463257   |0.5830000042915344  | 
+|[256, 128, 64]   |0.5278571248054504   |0.5189999938011169  |
+|[180, 90, 30]    |0.43642857670783997  |0.4629999995231628  |
+|[128, 64, 32]    |0.386428564786911    |0.4203333258628845  |
+
+So in conclusion, if we have high number of neurons per layer, then applying regularization techniques will increase the accuracy and decrease the variance overall. If we do not apply any regularization techniques then we can have moderate number of neurons to have a decent accuracy on training and testing set with low accuracy. <br>
+
+##### For our purposes, we select high number of neurons per layer with regularization
+#### Final model
+From all our analysis and extra experimentation we conclude our model with following metrics: <br>
+- activation : softmax
+- learning rate : 0.0001
+- number of hidden layers = 3
+- number of neurons in each layer = [512,256,128]
+- epochs = 100
+- regularization and dropout true
+
+Precision on the model :	 0.5774000692307671
+Recall on the model : 		 0.583
+F1score on the model : 		 0.5801865223684216
+Accuracy on the model : 	 0.6130000042915345
+
+
 ### SVM
 This model outperformed every other model and gave the best accuracy. Manual hyperparameter tuning was done. Linear, polynomial and RBF  kernel were compared using confusion matrix.
 
