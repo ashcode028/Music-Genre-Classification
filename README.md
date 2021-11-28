@@ -237,6 +237,7 @@ Using hyperparameter tuning :
 ### MLP
 - This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : 
 
+https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/activation.jpg
 
 |Activation |  Training Accuracy  |  Testing Accuracy  | 
 |:---       |                 ---:|                ---:|
