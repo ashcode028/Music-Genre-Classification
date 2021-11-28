@@ -235,9 +235,9 @@ Using hyperparameter tuning :
 |Recall          |0.9072401472896423            |
 
 ### MLP
-- This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : 
+This model is an Artificial Neural Network involving multiple layers and each layer has a considerable number of activation neurons. The primary training included random values of hyperparameters except the activation function . This initiation reflected overfitting in the data for different activation functions : 
 
-https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/activation.jpg
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/activation.jpg)
 
 |Activation |  Training Accuracy  |  Testing Accuracy  | 
 |:---       |                 ---:|                ---:|
@@ -245,14 +245,42 @@ https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_MLP/act
 |sigmoid    |0.941428542137146    |0.4970000088214874  |
 |tanh       |0.9997143149375916   |0.49266666173934937 |
 |softplus   |0.9991428852081299   | 0.5583333373069763 |
+from the following graph, we choose softplus to be the best activation function, considering softmax to be fixed for output
+Upon looking the graph, we can conclude a very high variance in testing and training accuracy and so we know that our model is overfitting. In fact the testing loss starts to increase which indicates a high cross entropy loss. This will be dealt later. For now we see that softplus, relu and sigmoid, all 3 have performed similar on training and testing set thus we will go with softplus since it provides a little less variance than others.
 
-- from the following graph, we choose softplus to be the best activation function, considering softmax to be fixed for output
-  
 #### Hyperparameter tuning has been done manually by manipulating the following metrics: 
-- no. of neurons
+- Learning rate <br>
+activation = softmax <br>
+no. of hidden layers = 3; neurons in each = [512,256,64] <br>
+activation of output layer is fixed to be softmax epochs = 100 <br>
 
-- no.of hidden layers
-- learning rate
+|Learning Rate |  Training Accuracy  |  Testing Accuracy  | 
+|:---          |                 ---:|                ---:|
+|0.01          |0.4044285714626312   |0.335999995470047   | 
+|0.001         |0.9888571500778198   |0.5666666626930237  |
+|0.0001        |0.9684285521507263   |0.5513333082199097  |
+|0.00001       |0.7134285569190979   |0.4996666610240936  |
+
+From the above graphs we see that 0.01 definitely results in over convergence and bounces as reflective from the accuracy graph. 0.001 has a very high variance and loss increases margianally with low acuracy so it isn't appropriate as well. <br>
+
+The best choice for alpha is either 0.0001 or 0.00001. <br>
+0.00001 has a relatively low variance and loss converges quickly with epochs but accuracy on training and testing set is pretty low. <br>
+0.0001 has a better performance but variance is very high
+
+- no.of hidden layers <br>
+activation = softmax <br>
+learning rate = 0.0001 <br>
+activation of output layer is fixed to be softmax epochs = 100 <br>
+
+|Number of layers|  Training Accuracy  |  Testing Accuracy  | 
+|:---            |                 ---:|                ---:|
+|2               |0.9782857298851013   |0.5383333563804626   | 
+|3               |0.9869999885559082   |0.5443333387374878  |
+|4               |0.9921428561210632   |0.5506666898727417  |
+
+In conclusion, increasing or decreasing the number of layers have no effect on variance. This is because we have too many neurons per layer. So we take 3 layers and reduce the number of neurons. 
+
+- Number of neurons
 - regularization and decomposition etc
 ### SVM
 This model outperformed every other model and gave the best accuracy. Manual hyperparameter tuning was done. Linear, polynomial and RBF  kernel were compared using confusion matrix.
