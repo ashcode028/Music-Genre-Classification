@@ -9,11 +9,13 @@ We have a quandary approach towards segregating our music based on genres and st
 We aim to address music classification into specific musical genres through our model and further extend this into practical applications. For this, we have done a thorough research and preprocessing by displaying the human as well as computer-interpreted graphs and labels. This is accompanied by clustering and an overall idea of the music we are dealing with in our dataset. We further propose Multi Classification models for the provided music dataset to categorize it into specific music genres. We have analyzed and tested 7-8 machine learning models and thoroughly experimented to achieve the best achievable performance, including hyperparameter tuning and a performance report. We aim to pick the best model and use it for our further research and implementation.
 
 ## Dataset Description
-We are using the __GTZAN__ dataset which contains a total of 1000 audio files in .wav format divided into 10 genres. Each genre has 100 songs of 30-sec duration. Along with the audio files, 2 CSV files containing features of the audio files. The files contain mean and variance calculated over multiple features that can be obtained from an audio file. The other file has the same composition, but the songs were divided into 3-second audio files. 
+We are using the __GTZAN__ dataset which contains a total of 1000 audio files in .wav format divided into 10 genres. Each genre has 100 songs of 30-sec duration. Along with the audio files, 2 CSV files containing features of the audio files. The files contain mean and variance calculated over multiple features that can be obtained from an audio file. The other file has the same composition, but the songs were divided into 3-second audio files. ![143768497-3cb355c0-3516-4774-9c9f-ce9df47991b8](https://user-images.githubusercontent.com/61936574/143768585-71c104a5-1520-419f-a712-9e245f0b66ac.png)
+
 ![Genres](https://github.com/ashcode028/Music-Genre-Classification/blob/7aff7f3c06156814dca7298baec67d6cc87df4cc/Features_extracted_plots/Genre.png)
 ### Audio signal feature extraction:
 We convert every audio file to signals with a sampling rate to analyze its characteristics. 
-Every waveform has its features in ttwo forms:
+Every waveform has its features in ttwo forms:![143768481-3a4fd0be-2161-4ee0-b28f-13486507d51a](https://user-images.githubusercontent.com/61936574/143768583-26a2bcd5-c20e-4520-b41e-219e78af3386.png)
+
 - Time domain- nothing much information about music quality can be extracted and explored apart from visual distinction in the waveforms
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z1.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/d9012c9e43e4cd18639841b931624ee19292352d/Features_extracted_plots/z2.png)
@@ -64,6 +66,30 @@ Shows pc1 holds 20% percent of the data, pc2 holds 13% of the data
 
 ## Classification:
 ### Logistic
+This model is a predictive analysis algorithm based on the concept of probability. GridSearchCV was used to pass all combinations of hyperparameters one by one into the model and the best parameters were selected. 
+
+Without Hyperparameter tuning:
+
+![Confusion Matrix - Logistic Regression Base Model](https://user-images.githubusercontent.com/61936574/143768349-137e14a6-cfa1-4f38-8a31-a7806dcde571.png)
+![ROC Curve Base Model](https://user-images.githubusercontent.com/61936574/143768389-584ab388-b0ed-4a60-bbb9-205e3179ad79.png)
+
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.67267|
+|Precision|0.74126|
+|Recall|0.74098|
+
+Using Hyperparameter tuning:
+
+![Confusion Matrix - Logistic Regression After HT](https://user-images.githubusercontent.com/61936574/143768481-3a4fd0be-2161-4ee0-b28f-13486507d51a.png)
+![ROC Curve after HT](https://user-images.githubusercontent.com/61936574/143768497-3cb355c0-3516-4774-9c9f-ce9df47991b8.png)
+
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.70504|
+|Precision|0.70324|
+|Recall|0.71873|
+
 ### SGD Classifier
 Took SGD as baseline model and performed hyperparameter tuning for a better performance.Though difference werent that great even after HP tuning.
 
