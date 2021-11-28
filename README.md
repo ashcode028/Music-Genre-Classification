@@ -254,6 +254,18 @@ Using hyperparameter tuning :
 - learning rate
 - regularization and decomposition etc
 ### SVM
+This model outperformed every other model and gave the best accuracy. Manual hyperparameter tuning was done. Linear, polynomial and RBF  kernel were compared using confusion matrix.
+Best Linear Kernel Model: 
+![Best SVM linear kernel](https://user-images.githubusercontent.com/61936574/143769002-09ed2434-fa45-4b84-860e-0648523a3e59.png)
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Best parameters |C=1.0,kernel='linear',random_state=0|
+|Accuracy score  |0.7067243645645777             |
+|Precision       |0.713365434574563              |
+|Recall          |0.7198237483278732             |
+
+Best Polynomial Kernel Model: 
+
 
 ## Conclusions:
 - SVMs performed the best among all classifiers with 94% accuracy
