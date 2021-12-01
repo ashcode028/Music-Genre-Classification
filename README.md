@@ -318,7 +318,7 @@ Now for the same neuron set, we apply regularization and neuron dropout to find 
 So in conclusion, if we have high number of neurons per layer, then applying regularization techniques will increase the accuracy and decrease the variance overall. If we do not apply any regularization techniques then we can have moderate number of neurons to have a decent accuracy on training and testing set with low accuracy. <br>
 
 ##### For our purposes, we select high number of neurons per layer with regularization
-#### Final model
+#### Final MLP model
 From all our analysis and extra experimentation we conclude our model with following metrics: <br>
 - activation : softmax 
 - learning rate : 0.0001
