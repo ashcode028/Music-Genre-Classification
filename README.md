@@ -104,14 +104,15 @@ Took SGD as baseline model and performed hyperparameter tuning for a better perf
 
 
 ### Gaussian NB
+
 We used a Simple Naive Bayes classifier, one vs Rest Naive Bayes as baseline models.
 Then used Hyperparameter testing to get better performance.
 
 Without Hyperparameter tuning:
 
-![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/simple NB.png)
+![ ](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/simpleNB.png)
 
-![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC-simple NB.png)
+![ ](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC-simpleNB.png)
 
 
 |Metric          |  Value                        |
