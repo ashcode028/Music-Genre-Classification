@@ -121,7 +121,10 @@ Without Hyperparameter tuning:
 |Precision|0.4761542269197442|
 |Recall|0.4902979078811803|
 
+
 With Hyperparameter tuning:
+
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_NB.png)
 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_NB.png)
