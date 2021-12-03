@@ -124,8 +124,7 @@ With Hyperparameter tuning:
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_NB.png)
 
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_NB.png)
-
-Best parameters : 
+ 
 |Metric          |  Value                        |
 |:---            |                           ---:|  
 |Accuracy score|0.5155155155155156|
