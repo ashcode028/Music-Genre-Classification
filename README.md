@@ -107,14 +107,30 @@ Took SGD as baseline model and performed hyperparameter tuning for a better perf
 We used a Simple Naive Bayes classifier, one vs Rest Naive Bayes as baseline models.
 Then used Hyperparameter testing to get better performance.
 
+Without Hyperparameter tuning:
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/simple NB.png)
+
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC-simple NB.png)
+
+
+|Metric          |  Value                        |
+|:---            |                           ---:|  
+|Accuracy score|0.48598598598598597|
+|Precision|0.4761542269197442|
+|Recall|0.4902979078811803|
+
+With Hyperparameter tuning:
+![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_NB.png)
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_NB.png)
 
 Best parameters : 
 |Metric          |  Value                        |
 |:---            |                           ---:|  
-|Accuracy score|0.468968968968968951|
-|Precision|0.4606482379884576|
-|Recall|0.4755693757933862|
+|Accuracy score|0.5155155155155156|
+|Precision|0.49864157768533374|
+|Recall|0.5050696700999591|
 
 ### KNN
 This model almost outperformed compared to Gaussian NB models. 
@@ -142,7 +158,8 @@ Using hyperparameter tuning :
 |Precision|0.9073617032054686|
 |Recall|0.905944266718195|
 
-
+Best params:
+{'metric': 'manhattan', 'n_neighbors': 1, 'weights': 'uniform'}
 
 
 ### Decision Trees
