@@ -93,6 +93,10 @@ Using Hyperparameter tuning:
 ### SGD Classifier
 Took SGD as baseline model and performed hyperparameter tuning for a better performance.Though difference werent that great even after HP tuning.
 
+
+
+With Hyperparameter tuning:
+
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/GS_SGD.png)
 ![](https://github.com/ashcode028/Music-Genre-Classification/blob/main/PLOTS_NB_KNN_SGD/ROC_SGD.png)
 
